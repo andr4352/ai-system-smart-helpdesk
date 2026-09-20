@@ -1,0 +1,8 @@
+flowchart TB
+    Student["Студент"] -->|"Текст обращения"| Portal["Внешний портал заявок"]
+    Operator["Оператор"] -->|"Исправление категории"| Portal
+    Portal -->|"HTTPS POST JSON"| System["Smart Helpdesk"]
+    System -->|"Категория и маршрут JSON"| Portal
+    Monitor["Prometheus"] -->|"HTTPS GET каждые 15 с"| System
+    Portal -->|"Обезличенный CSV вручную"| Train["Рабочее место разработчика"]
+    Train -->|"Версия модели через DVC и MinIO"| System

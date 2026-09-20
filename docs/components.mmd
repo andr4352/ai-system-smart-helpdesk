@@ -1,0 +1,16 @@
+flowchart TB
+    Client["Портал заявок"] -->|"HTTPS JSON"| API
+    subgraph App["Один контейнер FastAPI"]
+        API["API и аутентификация"] --> Valid["Pydantic"]
+        Valid --> Service["Сервис маршрутизации"]
+        Service --> Pipeline["Общий Pipeline TF-IDF и модель"]
+        Pipeline -->|"Категория и уверенность"| Service
+        Service -->|"Результат"| Repo["Репозиторий аудита"]
+        Service -->|"JSON"| API
+        API -.-> Obs["JSON-логи и metrics"]
+    end
+    API -->|"Ответ"| Client
+    Repo --> DB[("SQLite")]
+    Registry[("MinIO и DVC")] -->|"Копия при развертывании"| Local[("Локальный артефакт")]
+    Local -->|"Загрузка при старте"| Pipeline
+    Obs --> Prom["Prometheus"]
