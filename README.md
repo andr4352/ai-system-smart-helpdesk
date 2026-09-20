@@ -323,8 +323,6 @@ cd ai-system-smart-helpdesk
 
 ## 11. Использованные источники
 
-Методические указания к лабораторной работе № 2 «Проектирование архитектуры программной системы искусственного интеллекта».
-
 [1] scikit-learn. Feature extraction. https://scikit-learn.org/stable/modules/feature_extraction.html
 
 [2] Pydantic. Models. https://docs.pydantic.dev/latest/concepts/models/
@@ -333,4 +331,3 @@ cd ai-system-smart-helpdesk
 
 [4] Федеральный закон от 27.07.2006 № 152-ФЗ «О персональных данных». https://www.consultant.ru/document/cons_doc_LAW_61801/
 
-Дата обращения к электронным источникам: 20.09.2026.
