@@ -1,6 +1,6 @@
 FROM python:3.12-slim
 WORKDIR /service
-COPY requirements.txt .
+COPY requirements.txt requirements-component.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 RUN useradd --create-home service && mkdir runtime && chown service runtime

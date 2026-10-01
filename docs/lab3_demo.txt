@@ -1,0 +1,42 @@
+Вход: {"item_id": "TKT-101", "text": "Не могу войти в свой личный кабинет"}
+{
+  "request_id": "79fef104-5729-4205-806a-22dcb15fdb9e",
+  "item_id": "TKT-101",
+  "prediction": "ACCOUNT",
+  "confidence": 0.8586279498531829,
+  "route": "IT",
+  "model_version": "helpdesk-tfidf-lr-1.0.0",
+  "manual_review_required": false
+}
+Вход: {"item_id": "TKT-102", "text": "Подскажите когда будет пересдача экзамена"}
+{
+  "request_id": "d40f4ca3-ef3f-4965-b876-435a0c7e81cc",
+  "item_id": "TKT-102",
+  "prediction": "STUDY",
+  "confidence": 0.7990910960677793,
+  "route": "OPERATOR",
+  "model_version": "helpdesk-tfidf-lr-1.0.0",
+  "manual_review_required": true
+}
+Вход: {"item_id": "TKT-103", "text": "Моя оплата за обучение не отобразилась"}
+{
+  "request_id": "5c8af498-b15d-4f10-a63d-bc4b20f68db6",
+  "item_id": "TKT-103",
+  "prediction": "PAYMENT",
+  "confidence": 0.8339126313655286,
+  "route": "FINANCE",
+  "model_version": "helpdesk-tfidf-lr-1.0.0",
+  "manual_review_required": false
+}
+Вход: {"item_id": "TKT-104", "text": "Помогите пожалуйста разобраться"}
+{
+  "request_id": "262172f7-f082-405a-917d-28a98a63636b",
+  "item_id": "TKT-104",
+  "prediction": "OTHER",
+  "confidence": 0.27379147554719463,
+  "route": "OPERATOR",
+  "model_version": "helpdesk-tfidf-lr-1.0.0",
+  "manual_review_required": true
+}
+Вход: {"item_id": "TKT-105", "text": ""}
+INVALID_INPUT: [{'type': 'string_too_short', 'loc': ('text',), 'msg': 'String should have at least 10 characters', 'ctx': {'min_length': 10}}]
