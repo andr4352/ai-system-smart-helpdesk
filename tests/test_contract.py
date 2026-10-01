@@ -4,6 +4,7 @@ from app.main import app
 from app.services.prediction import choose_route
 
 def test_routes_and_validation(monkeypatch, tmp_path):
+    monkeypatch.setenv("MODEL_PATH", str(tmp_path / "missing.joblib"))
     monkeypatch.setenv("API_KEY", "test-key")
     monkeypatch.setenv("DB_PATH", str(tmp_path / "audit.db"))
     with TestClient(app) as client:
